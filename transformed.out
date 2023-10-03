@@ -1,2 +1,13 @@
-#^index.js&^const axios=require("axios");const runCall=async input=>{try{const response=await axios.get(`https://www.google.com/search?q=${input.search}`);console.log(response.data);return response.data}catch(error){console.error(error);return null}};module.exports=runCall;#^run.js&^#! /usr/bin/env node
-require("hypecall")(require("./index.js"));
+#^index.js&^const axios = require("axios");
+
+const runCall = async (input) => {
+  try {
+    const response = await axios.get(`https://www.googleapis.com/customsearch/v1?key=${input.apiKey}&cx=${input.cx}&q=${input.search}`);
+    return { response: response.data };
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+};
+
+module.exports = runCall;

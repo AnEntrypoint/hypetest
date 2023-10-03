@@ -1,6 +1,6 @@
 {
-  "name": "hypewikipedia",
-  "version": "0.0.3",
+  "name": "hypegoogle",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {

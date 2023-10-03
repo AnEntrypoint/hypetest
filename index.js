@@ -1,14 +1,12 @@
-const axios = require('axios');
-
-const runCall = async (input) => {
+const axios = require("axios");
+const runCall = async input => {
   try {
-    const response = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${input.search}&format=json`);
+    const response = await axios.get(`https://www.google.com/search?q=${input.search}`);
     console.log(response.data);
-    return response.data;
+    return {response:response.data}
   } catch (error) {
     console.error(error);
-    return null;
+    return null
   }
 };
-
 module.exports = runCall;

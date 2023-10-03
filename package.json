@@ -1,6 +1,6 @@
 {
-  "name": "hypetest",
-  "version": "0.11.3",
+  "name": "hypewikipedia",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
